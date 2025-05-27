@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>斜向消除俄罗斯方块</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>斜向消除俄罗斯方块</h1>
+        <div class="game-area">
+            <canvas id="tetris" width="300" height="600"></canvas>
+            <div class="side-panel">
+                <div class="next-piece">
+                    <h3>下一个方块</h3>
+                    <canvas id="nextPiece" width="120" height="120"></canvas>
+                </div>
+                <div class="score-display">
+                    <h3>分数</h3>
+                    <div id="score">0</div>
+                </div>
+                <div class="timer-display">
+                    <h3>游戏时间</h3>
+                    <div id="timer">00:00</div>
+                </div>
+                <div class="controls">
+                    <button id="startBtn">开始游戏</button>
+                    <button id="pauseBtn">暂停游戏</button>
+                    <button id="soundToggle">音效: 开</button>
+                    <button id="musicToggle">音乐: 开</button>
+                </div>
+                <div class="instructions">
+                    <h3>操作说明</h3>
+                    <p>← → : 左右移动</p>
+                    <p>↑ : 旋转</p>
+                    <p>↓ : 加速下落</p>
+                    <p>空格 : 直接落下</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 音频元素 -->
+    <audio id="moveSound" src="move.mp3.mp3" preload="auto"></audio>
+    <audio id="rotateSound" src="https://assets.mixkit.co/sfx/preview/mixkit-unlock-game-notification-253.mp3" preload="auto"></audio>
+    <audio id="dropSound" src="drop.mp3.mp3" preload="auto"></audio>
+    <audio id="clearSound" src="clear.mp3.mp3" preload="auto"></audio>
+    <audio id="gameOverSound" src="gameover.mp3.mp3" preload="auto"></audio>
+    <audio id="backgroundMusic" loop src="mixkit-tech-house-vibes-130.mp3" preload="auto"></audio>
+
+    <script src="game.js"></script>
+</body>
+</html>
